@@ -1,0 +1,48 @@
+
+   <div class="clearfix alert alert-success">
+    <span class="float-start">Create a CV</span>
+    <span class="float-end"><button type="button" class="btn btn-primary" (click)="updateForm()">Save CV</button></span>
+  </div>
+<form [formGroup]="profileForm">
+   
+
+    <div class="row">
+        <div class="col-sm-6">
+            <h2>Basic Info</h2>
+
+            <label for="street">Full Name: </label>
+            <input id="street" type="text" formControlName="street">
+
+            <label for="city">Contact: </label>
+            <input id="city" type="text" formControlName="city">
+
+            <label for="state">CPR: </label>
+            <input id="state" type="text" formControlName="state">
+
+            <label for="zip">Loction in Bharain: </label>
+            <input id="zip" type="text" formControlName="zip">
+
+            <h2>Educational Info</h2>
+
+            <label for="street">Highest Qualification: </label>
+            <input id="street" type="text" formControlName="street">
+
+
+        </div>
+
+        <div class="col-sm-6">
+            <h2>Job looking for</h2>
+            <label for="street">Job: </label>
+            <input id="street" type="text" formControlName="street">
+
+            <label for="street">Industry: </label>
+            <input id="street" type="text" formControlName="street">
+
+            <h2>Experience</h2>
+
+            <label for="street">Years: </label>
+            <input id="street" type="text" formControlName="street">
+        </div>
+
+    </div>
+</form>

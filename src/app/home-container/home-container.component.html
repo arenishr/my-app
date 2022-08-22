@@ -1,0 +1,24 @@
+
+<div class="mt-4 p-2 rounded">
+    <h1>{{ title }}</h1>
+   
+    <app-app-login></app-app-login>
+
+<input type="hidden" #selection>
+<!-- Terminal -->
+<div class="terminal" [ngSwitch]="selection.value">
+    <pre *ngSwitchDefault>Register as public user</pre>
+    <pre *ngSwitchCase="'material'">Login and get to know us</pre>
+    <pre *ngSwitchCase="'pwa'">Our service portfolio</pre>
+    <pre *ngSwitchCase="'build'">email:##### | mobile:#####</pre>
+    <button (click)="summit()">verify</button>
+   
+</div>
+  </div>
+
+
+
+
+
+
+
