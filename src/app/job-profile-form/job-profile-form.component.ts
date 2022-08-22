@@ -11,18 +11,18 @@ import { CVService } from '../services/cv.service';
 export class JobProfileFormComponent implements OnInit {
 
   profileForm = new FormGroup({
-    firstName: new FormControl(''),
-    lastName: new FormControl(''),
-    address: new FormGroup({
-      street: new FormControl(''),
-      city: new FormControl(''),
-      state: new FormControl(''),
-      zip: new FormControl('')
+    title: new FormControl(''),
+    sector: new FormControl(''),
+    jobdetail: new FormGroup({
+      qualification: new FormControl(''),
+      experience: new FormControl(''),
+      skills: new FormControl(''),
+      license: new FormControl('')
     })
   });
 
   updateForm(){
-
+console.log(this.profileForm);
     this.cv.getData().subscribe(result => {
 
     });

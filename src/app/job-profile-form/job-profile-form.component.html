@@ -3,40 +3,37 @@
     <span class="float-start">Create a job</span>
     <span class="float-end"><button type="button" class="btn btn-primary" (click)="updateForm()">Save Job</button></span>
   </div>
+<form [formGroup]="profileForm" (ngSubmit)="updateForm()">
+  
+    <div class="row">
+       <div class="col-sm-6">
+           <h2>Basic Info</h2>
 
-<div formGroupName="address">
-     <div class="row">
-        <div class="col-sm-6">
-            <h2>Basic Info</h2>
+           <label for="title">Job Title: </label>
+           <input id="title" type="text" formControlName="title">
 
-            <label for="street">Full Name: </label>
-            <input id="street" type="text" formControlName="street">
+           <label for="sector">Sector: </label>
+           <input id="sector" type="text" formControlName="sector">
+           
+       </div>
+       <div class="col-sm-6">
+        <div formGroupName="jobdetail">
+          <h2>Job Detail</h2>
 
-            <label for="city">Contact: </label>
-            <input id="city" type="text" formControlName="city">
+          <label for="qualification">Qualification: </label>
+          <input id="qualification" type="text" formControlName="qualification">
 
-            <label for="state">CPR: </label>
-            <input id="state" type="text" formControlName="state">
+          <label for="experience">Experience: </label>
+          <input id="experience" type="text" formControlName="experience">
 
-            <label for="zip">Loction in Bharain: </label>
-            <input id="zip" type="text" formControlName="zip">
+          <label for="skills">Skills: </label>
+          <input id="skills" type="text" formControlName="skills">
+
+          <label for="license">License: </label>
+          <input id="license" type="text" formControlName="license">
         </div>
-        <div class="col-sm-6">
-            <h2>Educational Info</h2>
-
-            <label for="street">Full Name: </label>
-            <input id="street" type="text" formControlName="street">
-
-            <h2>Job Looking for</h2>
-
-            <label for="street">Full Name: </label>
-            <input id="street" type="text" formControlName="street">
-
-            <h2>Experience</h2>
-
-            <label for="street">Full Name: </label>
-            <input id="street" type="text" formControlName="street">
-        </div>
-    </div>
+        
+      </div>
 
 </div>
+</form>
