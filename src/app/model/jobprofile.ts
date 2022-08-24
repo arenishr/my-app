@@ -1,13 +1,20 @@
 
 export class JobProfile { 
     private id: number;
-    private name: string; 
-    private job:string;
+    private title!: string; 
+    private sector!:string;
+    private qualification!: string;
+    private experience!: string;
+    private skills!: string;
+    private license!: string;
+    private salary!: string;
+    private remarks!: string;
 
-    constructor(id: number, name: string, job: string) {
+
+    constructor(id: number, title: string, sector: string) {
         this.id = id;
-        this.name = name;
-        this.job = job;
+        this.title = title;
+        this.sector = sector;
        
       }
 

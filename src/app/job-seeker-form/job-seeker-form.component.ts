@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup,FormControl } from '@angular/forms';
 import { CV } from '../model/cv';
@@ -9,21 +10,26 @@ import { CVService } from '../services/cv.service';
   styleUrls: ['./job-seeker-form.component.css']
 })
 export class JobSeekerFormComponent implements OnInit {
-
-  profileForm = new FormGroup({
-    firstName: new FormControl(''),
-    lastName: new FormControl(''),
-    address: new FormGroup({
-      street: new FormControl(''),
-      city: new FormControl(''),
-      state: new FormControl(''),
-      zip: new FormControl('')
-    })
+// 	id 	name 	education_1 	education_2 	id_type 	id_no 	current_job 	experience 	skills 	languages 
+  cvForm = new FormGroup({
+    name: new FormControl(''),
+    education_1: new FormControl(''),
+    education_2: new FormControl(''),
+    id_type: new FormControl(''),
+    id_no: new FormControl(''),
+    current_job: new FormControl(''),
+    experience: new FormControl(''),
+    skills: new FormControl(''),
+    languages: new FormControl('')
+   
   });
 
-  constructor(private cv: CVService) { }
+  constructor(private cv: CVService,private http: HttpClient) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    let objects=this.http.post("http://localhost:8080/api/savejob",{responseType: 'text'}).subscribe(res=>{
+      console.log(res);
+    })
   }
 
   updateForm(){

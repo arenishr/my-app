@@ -3,45 +3,46 @@
     <span class="float-start">Create a CV</span>
     <span class="float-end"><button type="button" class="btn btn-primary" (click)="updateForm()">Save CV</button></span>
   </div>
-<form [formGroup]="profileForm">
+
+  <!-- id 	name 	education_1 	education_2 	id_type 	id_no 	current_job 	experience 	skills 	languages  -->
+<form [formGroup]="cvForm">
    
 
     <div class="row">
         <div class="col-sm-6">
             <h2>Basic Info</h2>
 
-            <label for="street">Full Name: </label>
-            <input id="street" type="text" formControlName="street">
+            <label for="name">Full Name: </label>
+            <input id="name" type="text" formControlName="name">
 
-            <label for="city">Contact: </label>
-            <input id="city" type="text" formControlName="city">
+            <label for="education_1">Education_1: </label>
+            <input id="education_1" type="text" formControlName="education_1">
 
-            <label for="state">CPR: </label>
-            <input id="state" type="text" formControlName="state">
+            <label for="education_2">Education_2: </label>
+            <input id="education_2" type="text" formControlName="education_2">
 
-            <label for="zip">Loction in Bharain: </label>
-            <input id="zip" type="text" formControlName="zip">
+            <label for="id_type">Id Type: </label>
+            <input id="id_type" type="text" formControlName="id_type">
 
-            <h2>Educational Info</h2>
-
-            <label for="street">Highest Qualification: </label>
-            <input id="street" type="text" formControlName="street">
+            <label for="id_no">Id No: </label>
+            <input id="id_no" type="text" formControlName="id_no">
 
 
         </div>
 
         <div class="col-sm-6">
             <h2>Job looking for</h2>
-            <label for="street">Job: </label>
-            <input id="street" type="text" formControlName="street">
+            <label for="current_job">Current Job: </label>
+            <input id="current_job" type="text" formControlName="current_job">
 
-            <label for="street">Industry: </label>
-            <input id="street" type="text" formControlName="street">
+            <label for="experience">Experience: </label>
+            <input id="experience" type="text" formControlName="experience">
 
-            <h2>Experience</h2>
+            <label for="skills">Skills: </label>
+            <input id="skills" type="text" formControlName="skills">
 
-            <label for="street">Years: </label>
-            <input id="street" type="text" formControlName="street">
+            <label for="languages">Languages: </label>
+            <input id="languages" type="text" formControlName="languages">
         </div>
 
     </div>
