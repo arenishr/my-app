@@ -16,6 +16,9 @@ import { JobProfileMatchComponent } from './job-profile-match/job-profile-match.
 import { TopMenuComponent } from './top-menu/top-menu.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppLoginComponent } from './app-login/app-login.component';
+import { JobListComponent } from './job-list/job-list.component';
+import { CvListComponent } from './cv-list/cv-list.component';
+import { CvMatchComponent } from './cv-match/cv-match.component';
 
 
 @NgModule({
@@ -31,7 +34,10 @@ import { AppLoginComponent } from './app-login/app-login.component';
     JobProfileFormComponent,
     JobProfileMatchComponent,
     TopMenuComponent,
-    AppLoginComponent
+    AppLoginComponent,
+    JobListComponent,
+    CvListComponent,
+    CvMatchComponent
   ],
   imports: [
     BrowserModule,
