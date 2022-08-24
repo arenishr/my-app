@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup,FormControl } from '@angular/forms';
 import { CV } from '../model/cv';
@@ -27,16 +27,18 @@ export class JobSeekerFormComponent implements OnInit {
   constructor(private cv: CVService,private http: HttpClient) { }
 
   ngOnInit() {
-    let objects=this.http.post("http://localhost:8080/api/savejob",{responseType: 'text'}).subscribe(res=>{
-      console.log(res);
-    })
+    this.cv.getData().subscribe((result: any) => {
+      console.log("Fetch CV from server");
+      console.log(result);
+
+    });
   }
 
   updateForm(){
-    let cv = new CV(1,"test","job");
-    this.cv.saveCV(cv).subscribe(result => {
-
-      
+    
+    this.cv.saveCV(this.cvForm.value).subscribe((result: any)=>{
+      console.log("Save CV in server");
+      console.log(result);
     });
   }
 }

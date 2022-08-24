@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup,FormControl } from '@angular/forms';
-import { CVService } from '../services/cv.service';
-
+import { JobService } from '../services/job.service';
 
 @Component({
   selector: 'app-job-profile-form',
@@ -22,16 +21,23 @@ export class JobProfileFormComponent implements OnInit {
   });
 
   updateForm(){
-console.log(this.profileForm);
-    this.cv.getData().subscribe(result => {
+console.log(this.profileForm.value);
 
-    });
-
+this.jobservice.saveJob(this.profileForm.value).subscribe((result: any)=>{
+  console.log("Save JOB in server");
+  console.log(result);
+})
+    
   }
 
-  constructor(private cv: CVService) { }
+  constructor(private jobservice: JobService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.jobservice.getData().subscribe((result: any) => {
+      console.log("Fetch JOB from server");
+      console.log(result);
+
+    });
   }
 
 }
