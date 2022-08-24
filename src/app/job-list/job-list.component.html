@@ -15,9 +15,9 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
+                      <tr *ngFor="let job of jobList">
                         <th scope="row">1</th>
-                        <td>Mark</td>
+                        <td>{{job.name}}</td>
                         <td>Otto</td>
                         <td>@mdo</td>
                       </tr>

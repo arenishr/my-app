@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CVService } from '../services/cv.service';
 
 @Component({
   selector: 'app-cv-list',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cv-list.component.css']
 })
 export class CvListComponent implements OnInit {
+  cvList:any[]=[];
+  constructor(private cv: CVService) { }
 
-  constructor() { }
+  ngOnInit() {
+    this.cv.getData().subscribe((result: any) => {
+      this.cvList=result;
+      console.log("Fetch CV from server");
+      console.log(result);
 
-  ngOnInit(): void {
+    });
   }
 
 }

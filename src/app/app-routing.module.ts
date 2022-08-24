@@ -5,6 +5,7 @@ import { CvMatchComponent } from './cv-match/cv-match.component';
 import { HomeContainerComponent } from './home-container/home-container.component';
 import { JobListComponent } from './job-list/job-list.component';
 import { JobProfileFormComponent } from './job-profile-form/job-profile-form.component';
+import { JobProfileMatchComponent } from './job-profile-match/job-profile-match.component';
 import { JobSeekerFormComponent } from './job-seeker-form/job-seeker-form.component';
 
 const routes: Routes = [
@@ -35,6 +36,10 @@ const routes: Routes = [
   {
     path:'cv-match',
     component:CvMatchComponent
+  },
+  {
+    path:'job-match',
+    component:JobProfileMatchComponent
   }
 ];
 
