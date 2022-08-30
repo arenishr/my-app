@@ -10,28 +10,34 @@
        <div class="col-sm-6">
            <h2>Basic Info</h2>
 
-           <label for="title">Job Title: </label>
-           <input id="title" type="text" formControlName="title">
+           <label for="title" class="form-label">Job Title: </label>
+           <input id="title" class="form-control" type="text" formControlName="title">
 
-           <label for="sector">Sector: </label>
-           <input id="sector" type="text" formControlName="sector">
+           <label for="sector" class="form-label">Sector: </label>
+           <select class="form-select" aria-label="Default select example">
+            <option selected>Select Sector</option>
+            <option value="1">Administration</option>
+            <option value="2">Accounting</option>
+            <option value="3">Sales</option>
+          </select>
+           <!-- <input id="sector" class="form-control" type="text" formControlName="sector"> -->
            
        </div>
        <div class="col-sm-6">
         <div formGroupName="jobdetail">
           <h2>Job Detail</h2>
 
-          <label for="qualification">Qualification: </label>
-          <input id="qualification" type="text" formControlName="qualification">
+          <label for="qualification" class="form-label">Qualification: </label>
+          <input id="qualification" class="form-control" type="text" formControlName="qualification">
 
-          <label for="experience">Experience: </label>
-          <input id="experience" type="text" formControlName="experience">
+          <label for="experience" class="form-label">Experience: </label>
+          <input id="experience" class="form-control" type="text" formControlName="experience">
 
-          <label for="skills">Skills: </label>
-          <input id="skills" type="text" formControlName="skills">
+          <label for="skills" class="form-label">Skills: </label>
+          <input id="skills" class="form-control" type="text" formControlName="skills"> 
 
-          <label for="license">License: </label>
-          <input id="license" type="text" formControlName="license">
+          <label for="license" class="form-label">License: </label>
+          <input id="license" class="form-control" type="text" formControlName="license">
         </div>
         
       </div>

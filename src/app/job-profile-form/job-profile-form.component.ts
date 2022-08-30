@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup,FormControl } from '@angular/forms';
 import { JobService } from '../services/job.service';
+import * as Tagify from '@yaireo/tagify';
 
 @Component({
   selector: 'app-job-profile-form',
@@ -32,12 +33,20 @@ this.jobservice.saveJob(this.profileForm.value).subscribe((result: any)=>{
 
   constructor(private jobservice: JobService) { }
 
+  //skills = ['Pizza', 'Pasta', 'Parmesan'];
+
   ngOnInit() {
     this.jobservice.getData().subscribe((result: any) => {
       console.log("Fetch JOB from server");
       console.log(result);
 
     });
+
+    
+
+
   }
+
+   
 
 }

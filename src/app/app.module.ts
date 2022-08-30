@@ -21,6 +21,7 @@ import { CvListComponent } from './cv-list/cv-list.component';
 import { CvMatchComponent } from './cv-match/cv-match.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +45,8 @@ import { CvMatchComponent } from './cv-match/cv-match.component';
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule  ],
+    ReactiveFormsModule
+],
   providers: [],
   bootstrap: [AppComponent]
 })
